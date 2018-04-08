@@ -1,23 +1,32 @@
+//********************************************************
+//Change the following parameters according to your liking
+//********************************************************
 
 //cylinder paramters; the item you want to store
 cylDiameter         = 14.5;   //cylinder diameter; 14.5 for typical AA 10.5 for AAA
 cylSlack            = 0.5;    //wiggle room around cylinder, 0.5 seems to be okay
 cylEnclosedHeight   = 23;     //amount of the battery that sits in the enclore, about 50% is good
 cylWall             = 0.8;    //minimum thickness of the plastic wall between objects, let this be a multiple of your 3d printers nozzle
-nippleHeight        = 1;
+nippleHeight        = 1;      //depth of the indent in the bottom of the holder for the nipple/positive terminal of the battery to sit in
 
 //container paramters; the box the stored item sits in
-xSlots      = 3;
-ySlots      = 5;
-contBottom  = 1;  //multiple of printer layer height
+xSlots      = 3;    //
+ySlots      = 5;    //
+contBottom  = 1;    //multiple of printer layer height
 contWall    = 0.8;  //multiple of printer nozzle width
 
-//global variables, no need to touch these
+//********************************************************
+//global variables, no need to touch these unless you want to
+//********************************************************
+
 $fn = 44; //works best if modulo 4, since cylinders touch on 4 sides, 24 seems okay
 cylTotal = cylDiameter+cylSlack+cylWall;
 containerX = cylTotal*xSlots;
 containerY = cylTotal*ySlots;
 
+//********************************************************
+//functions below, no need to touch these unless you want to
+//********************************************************
 
 difference(){
     container("round"); //available types; square,round,light
