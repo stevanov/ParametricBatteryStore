@@ -1,3 +1,8 @@
+// Steven Kramer 2018
+// stevanov/ParametricBatteryStore is licensed under the
+// GNU Affero General Public License v3.0
+
+
 //********************************************************
 //Change the following parameters according to your liking
 //********************************************************
